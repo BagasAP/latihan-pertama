@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Latihan</title>
-</head>
-<body>
-Bagas Alvi Pramaditya
-</body>
-</html>
+@extends('layouts.master')
+@section('isi')
+
+<h1>Halo</h1>
+Selamat datang di web saya <br>
+laravel,emang keren.
+
+@endsection

@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about',function() {
-	return '<h1>Halo</h1>'
-	.'selamat datang di web saya <br>'
-	.'laravel, emang keren.';
+	return view('about');
 });
 
 Route::get('/awal',function() {
@@ -48,3 +46,43 @@ Route::get('nama/{nama}',function($a){
 	$a='John';
 	return 'Ini halaman about '.$a;
 });
+
+Route::get('testmodel',function(){
+	$a = App\Post::all();
+	return $a;
+});
+
+Route::get('id',function(){
+	$b = App\Post::find(1);
+	return $b;
+});
+
+Route::get('model',function(){
+	$c = App\Post::where('title','like','Tips cepat menikah')->get();
+	return $c;
+});
+
+Route::get('ubah',function(){
+	$post = App\Post::find(1);
+	$post->title =" ciri keluarga sakinah";
+	$post->save();
+	return $post;
+});
+
+Route::get('tambah',function(){
+	$post = new App\Post;
+	$post->title= "Amalan Pembuka Jodoh";
+	$post->content ="shalat malam, puasa sunah, silaturahmi,senyum,doa,tobat";
+	$post->save();
+	return $post;
+});
+
+Route::get('delete',function(){
+	$post = App\Post::find(1);
+	$post->delete();
+});
+
+Route::get('cektampilan',function(){
+	return view('layouts.master');
+});
+
