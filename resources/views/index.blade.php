@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('isi')
 
-	@foreach($ortu as $data) <hr>
+		@foreach($ortu as $data) <hr>
 		Nama Ayah : {{$data->nama_ayah}} <br>
 		Umur Ayah : {{$data->umur_ayah}} <br>
 		Nama Ibu  : {{$data->nama_ibu}} <br>
@@ -12,6 +12,5 @@
 		@endforeach
 		<hr>
 		@endforeach
-
 
 @endsection
