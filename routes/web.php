@@ -118,3 +118,4 @@ Route::get('index3', 'Mycontroller@coba');
 
 
 Route::resource('orangtua','OrangtuaController');
+Route::resource('murid','MuridController');
